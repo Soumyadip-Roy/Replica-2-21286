@@ -1,0 +1,270 @@
+/*general*/
+
+:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+} /*removing the unwanted blue outline on focus*/
+
+body {
+  background: rgb(235, 235, 235);
+  color: black;
+}
+.grey {
+  color: rgb(77, 75, 75);
+}
+
+.hover-box:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(146, 146, 146, 0.384);
+}
+
+/*navbar*/
+.bg-dark {
+  background-color: black !important;
+}
+.navbar > div {
+  padding: 0 15vw 0 15vw;
+}
+#navbarAltMarkup {
+  width: 60%;
+}
+.navbar-nav {
+  gap: 2vw;
+}
+.nav-link:last-child {
+  min-width: 100px;
+}
+.nav-link {
+  text-align: center;
+}
+.logo-small {
+  display: none;
+}
+.navbar-dark .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+}
+/*carousel - 1*/
+
+#carouselExampleDark {
+  margin: 20px auto;
+  width: 70%;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: rgba(214, 214, 214, 0.26) 0px 0px 10px;
+}
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: flex;
+  flex-direction: row;
+} /*this was the most difficult thing to spot (all were display:block)*/
+
+.carousel-indicators {
+  position: relative;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: #b6b6b6;
+}
+.carousel-indicators .active {
+  width: 75px;
+  height: 2px;
+}
+
+img[src="image11.jpg"] {
+  width: 150px;
+}
+
+#carouselExampleDark .carousel-control-prev-icon,
+#carouselExampleDark .carousel-control-next-icon{
+  filter: invert(0) grayscale(100);
+  border-radius: 50%;
+  padding:8px;
+  background-color: rgb(0, 0, 0);
+  height:20px;
+  width:20px;
+}
+
+
+
+/*carousel-2*/
+#carouselExampleControls {
+  padding: 5vw;
+}
+
+.carousel-item .col-3 {
+  overflow: hidden; /*for border radius*/
+}
+
+.absolute {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.absolute p {
+  font-size: 1vw;
+  margin: 0;
+}
+#pdt-desc {
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+/*grid*/
+
+img[src="Frame18.jpg"] {
+  float: right;
+}
+
+.b-r {
+  border-radius: 10px;
+  transition: all 500ms ;
+}
+
+.b-r:hover{
+  box-shadow: 0 0 10px rgba(173, 171, 171, 0.596);
+}
+
+
+/*questionAnswers*/
+.ques-no {
+  margin-left: -2%;
+}
+
+#accordionFlushExample {
+  padding:0px 20px 40px 20px;
+}
+
+.accordion-collapse {
+  margin-left: 6%;
+  width: 95%;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #0b61e2;    /*nice color*/
+  background-color: #ffffff;
+}
+
+.absolute2{
+  font-weight:bold;
+  position:absolute;
+  top:0;
+  padding:4%;
+  width:80%;
+  line-height:1;
+}
+.absolute3{
+  width:50%;
+  margin-top: 50px;
+}
+
+.accordion-button::after{
+  filter: invert(1) grayscale(100);
+  border-radius: 50%;
+  padding:8px;
+  background-color: rgb(243, 242, 242);
+  height:20px;
+  width:20px;
+}
+
+
+/*footer*/
+
+footer {
+  background-color: #000000;
+  padding: 50px 0px;
+}
+
+footer ul li {
+  padding: 5px 0px;
+  list-style: none;
+}
+
+.list span {
+  color: white;
+  display: block;
+  font-size: 20px;
+}
+
+.list a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.breadcrumb-item.active,
+.breadcrumb-item.active::before {
+  color: white;
+}
+.list span:hover , .list li:hover{
+  color:rgb(211, 210, 210)
+}
+/*Media Queries*/ /*Used Bootstrap still without media queries site looks bit */
+
+@media all and (max-width: 992px) {
+  #pdt-desc {
+    display: none;
+  }
+  .absolute p {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .navbar-nav {
+    gap: 0;
+  }
+  #carouselExampleControls {
+    padding: 10px;
+  }
+  #carouselExampleControls .carousel-control-prev-icon,
+  #carouselExampleControls .carousel-control-next-icon {
+    display: none;
+  }
+
+  .logo img {
+    position: absolute;
+    top: 10px;
+    left: 48%;
+  }
+  #carouselExampleDark {
+    width: 95%;
+  }
+  h1 {
+    font-size: max(3.5vw, 25px);
+  }
+  h5 {
+    font-size: max(1.8vw, 15px);
+  }
+  h4 {
+    font-size: max(2vw, 20px);
+  }
+  .sec-col {
+    display: none;
+  }
+  .first-col {
+    display: flex;
+    justify-content: center;
+  }
+
+  .accordion-item {
+    width: 95% !important;
+  }
+  #accordionFlushExample {
+    padding: 20px;
+  }
+  img[src="image11.jpg"] {
+    width: 100px;
+  }
+}
+
+@media all and (max-width:576px) {
+  .center-small li,
+  .center-small span {
+    display: flex;
+    justify-content: center;
+  }
+  
+}
